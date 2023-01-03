@@ -53,8 +53,16 @@
     <main role="main" class="container">
         <div class="row">
           <div class="col-md-8">
-            <!--Create block for content to into -->
+            <!-- Flash Messages -->
+            {% if messages %}
+              {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{message}}
+              </div>
+              {% endfor %}
+            {% endif %}
 
+            <!--Create block for content to go into -->
             {% block content %}{% endblock %}
           </div>
           <div class="col-md-4">
