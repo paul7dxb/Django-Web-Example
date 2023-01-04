@@ -1,2 +1,4 @@
 django_example/db.sqlite3
 __pycache__/
+
+profile_pics/
